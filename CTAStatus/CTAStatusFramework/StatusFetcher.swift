@@ -15,8 +15,9 @@ public struct StatusFetcher {
         
         let url = URL(string: "http://www.transitchicago.com/api/1.0/routes.aspx?outputType=JSON")!
         let task = NetworkTask<RouteInfo>(url: url)
+        let coordinator = JSONTaskCoordinator<RouteInfo>()
         
-        TaskCoordinator.sendTaskAndParseJSONResponse(task) { result in
+        coordinator.sendTaskAndParseResponse(task) { result in
             
             switch result {
             case .success(let routeInfos):
