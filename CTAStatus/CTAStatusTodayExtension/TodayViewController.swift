@@ -11,10 +11,21 @@ import NotificationCenter
 import UIKit
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    @IBOutlet var tableDataSource: TodayTableViewDataSource!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-//        FrameworkTest.printHelloFramework()
+        RoutesFetcher.fetchTrainRoutes() { result in
+            
+            switch result {
+            case .success(let routes):
+                self.tableDataSource.reloadTable(withRoutes: routes)
+            case .failure:
+                print("Today extension failed to fetch train routes")
+            }
+        }
     }
 }

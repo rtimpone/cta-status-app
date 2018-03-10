@@ -30,9 +30,12 @@
 		FB9523EB205446C800380FAA /* ResponseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EA205446C800380FAA /* ResponseLogger.swift */; };
 		FB9523ED20544F9D00380FAA /* TaskSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EC20544F9D00380FAA /* TaskSender.swift */; };
 		FB9523EF20544FB300380FAA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EE20544FB300380FAA /* Result.swift */; };
-		FB9523F12054577C00380FAA /* StatusFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F02054577C00380FAA /* StatusFetcher.swift */; };
+		FB9523F12054577C00380FAA /* RoutesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F02054577C00380FAA /* RoutesFetcher.swift */; };
 		FB9523F32054595900380FAA /* RouteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F22054595900380FAA /* RouteStatus.swift */; };
 		FB9523F520545C3E00380FAA /* RouteListFilterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F420545C3E00380FAA /* RouteListFilterer.swift */; };
+		FBFBF43220547E110002AB25 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF43120547E110002AB25 /* TodayTableViewCell.swift */; };
+		FBFBF43420547F380002AB25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF43320547F380002AB25 /* Extensions.swift */; };
+		FBFBF436205482080002AB25 /* TodayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF435205482080002AB25 /* TodayTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,9 +113,12 @@
 		FB9523EA205446C800380FAA /* ResponseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogger.swift; sourceTree = "<group>"; };
 		FB9523EC20544F9D00380FAA /* TaskSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSender.swift; sourceTree = "<group>"; };
 		FB9523EE20544FB300380FAA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		FB9523F02054577C00380FAA /* StatusFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFetcher.swift; sourceTree = "<group>"; };
+		FB9523F02054577C00380FAA /* RoutesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesFetcher.swift; sourceTree = "<group>"; };
 		FB9523F22054595900380FAA /* RouteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStatus.swift; sourceTree = "<group>"; };
 		FB9523F420545C3E00380FAA /* RouteListFilterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListFilterer.swift; sourceTree = "<group>"; };
+		FBFBF43120547E110002AB25 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		FBFBF43320547F380002AB25 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FBFBF435205482080002AB25 /* TodayTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,9 +213,10 @@
 		FB9523A620543B2300380FAA /* CTAStatusFramework */ = {
 			isa = PBXGroup;
 			children = (
+				FBFBF43320547F380002AB25 /* Extensions.swift */,
 				FB9523F420545C3E00380FAA /* RouteListFilterer.swift */,
 				FB9523F22054595900380FAA /* RouteStatus.swift */,
-				FB9523F02054577C00380FAA /* StatusFetcher.swift */,
+				FB9523F02054577C00380FAA /* RoutesFetcher.swift */,
 				FB9523B220543B2900380FAA /* Resources */,
 			);
 			path = CTAStatusFramework;
@@ -237,6 +244,8 @@
 			children = (
 				FB9523C020543CEE00380FAA /* MainInterface.storyboard */,
 				FB9523BE20543CEE00380FAA /* TodayViewController.swift */,
+				FBFBF435205482080002AB25 /* TodayTableViewDataSource.swift */,
+				FBFBF43120547E110002AB25 /* TodayTableViewCell.swift */,
 				FB9523CB20543D1400380FAA /* Resources */,
 			);
 			path = CTAStatusTodayExtension;
@@ -470,9 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB9523F12054577C00380FAA /* StatusFetcher.swift in Sources */,
+				FB9523F12054577C00380FAA /* RoutesFetcher.swift in Sources */,
 				FB9523F32054595900380FAA /* RouteStatus.swift in Sources */,
 				FB9523F520545C3E00380FAA /* RouteListFilterer.swift in Sources */,
+				FBFBF43420547F380002AB25 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +491,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9523BF20543CEE00380FAA /* TodayViewController.swift in Sources */,
+				FBFBF43220547E110002AB25 /* TodayTableViewCell.swift in Sources */,
+				FBFBF436205482080002AB25 /* TodayTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
