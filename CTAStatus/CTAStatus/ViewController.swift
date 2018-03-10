@@ -14,6 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FrameworkTest.printHelloFramework()
+        StatusFetcher.fetchTrainRoutes() { result in
+            
+            switch result {
+            case .success(let routes):
+                for route in routes {
+                    print("\(route.name): \(route.status)")
+                }
+            case .failure:
+                print("failed to get route statuses")
+            }
+        }
     }
 }

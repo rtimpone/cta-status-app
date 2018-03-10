@@ -1,5 +1,5 @@
 //
-//  NetworkingTest.swift
+//  NetworkTask.swift
 //  NetworkingFramework
 //
 //  Created by Rob Timpone on 3/10/18.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-public class NetworkingTest {
+public struct NetworkTask<T> {
     
-    public class func printHelloNetworking() {
-        
-        print("Hello, networking!")
+    var url: URL
+    
+    public init(url: URL) {
+        self.url = url
     }
 }
