@@ -81,6 +81,7 @@
                     <size key="freeformSize" width="320" height="300"/>
                     <connections>
                         <outlet property="tableDataSource" destination="5eL-33-Z6W" id="hgA-id-dqE"/>
+                        <outlet property="tableView" destination="UqC-Ge-loW" id="IP0-cp-5xW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

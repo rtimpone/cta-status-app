@@ -10,13 +10,20 @@ import CTAStatusFramework
 import NotificationCenter
 import UIKit
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+class TodayViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet var tableDataSource: TodayTableViewDataSource!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+    }
+}
+
+extension TodayViewController: NCWidgetProviding {
+    
+    func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
         
         RoutesFetcher.fetchTrainRoutes() { result in
             
@@ -26,6 +33,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             case .failure:
                 print("Today extension failed to fetch train routes")
             }
+        }
+    }
+    
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        
+        switch activeDisplayMode {
+        case .compact:
+            preferredContentSize = maxSize
+        case .expanded:
+            preferredContentSize = tableView.contentSize
         }
     }
 }
