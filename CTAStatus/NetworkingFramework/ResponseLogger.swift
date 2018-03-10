@@ -8,9 +8,14 @@
 
 import Foundation
 
-struct Logger {
+protocol ResponseLogger {
     
-    static func generateLog(from response: URLResponse) -> String {
+    func logResponse(_ response: URLResponse)
+}
+
+struct ConsoleResponseLogger: ResponseLogger {
+    
+    func logResponse(_ response: URLResponse) {
         
         var statusCode = "UNKNOWN STATUS CODE"
         if let httpResponse = response as? HTTPURLResponse {
@@ -22,6 +27,7 @@ struct Logger {
             url = responseURL.absoluteString
         }
         
-        return "(\(statusCode)) \(url)"
+        let message = "(\(statusCode)) \(url)"
+        print(message)
     }
 }

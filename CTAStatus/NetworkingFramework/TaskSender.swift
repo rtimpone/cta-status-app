@@ -8,16 +8,21 @@
 
 import Foundation
 
-struct TaskSender {
+protocol TaskSender {
     
-    static func sendTask<T>(_ task: NetworkTask<T>, completion: @escaping (Result<Data>) -> Void) {
+    associatedtype TaskType
+    var logger: ResponseLogger { get }
+}
+
+extension TaskSender {
+    
+    func sendTask(_ task: NetworkTask<TaskType>, completion: @escaping (Result<Data>) -> Void) {
         
         let url = task.url
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let response = response {
-                let logMessage = Logger.generateLog(from: response)
-                print(logMessage)
+                self.logger.logResponse(response)
             }
             
             guard let data = data else {
@@ -30,4 +35,10 @@ struct TaskSender {
         
         task.resume()
     }
+}
+
+struct ConsoleLoggingTaskSender<T>: TaskSender {
+    
+    typealias TaskType = T
+    var logger: ResponseLogger = ConsoleResponseLogger()
 }

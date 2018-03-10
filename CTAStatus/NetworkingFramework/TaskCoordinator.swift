@@ -10,15 +10,16 @@ import Foundation
 
 protocol TaskCoordinator {
     
-    associatedtype typeToParseInto
-    var parser: Parser<typeToParseInto> { get }
+    associatedtype TypeToParseInto
+    var parser: Parser<TypeToParseInto> { get }
 }
 
 extension TaskCoordinator {
     
-    public func sendTaskAndParseResponse<T: Decodable>(_ task: NetworkTask<T>, completion: @escaping (Result<[typeToParseInto]>) -> Void) {
+    public func sendTaskAndParseResponse<T: Decodable>(_ task: NetworkTask<T>, completion: @escaping (Result<[TypeToParseInto]>) -> Void) {
         
-        TaskSender.sendTask(task) { result in
+        let sender = ConsoleLoggingTaskSender<T>()
+        sender.sendTask(task) { result in
             
             switch result {
             case .success(let data):
@@ -44,7 +45,7 @@ extension TaskCoordinator {
 
 public struct JSONTaskCoordinator<T: Decodable>: TaskCoordinator {
 
-    typealias typeToParseInto = T
+    typealias TypeToParseInto = T
     var parser: Parser<T> = JSONParser<T>()
     
     public init() {}
