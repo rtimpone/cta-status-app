@@ -15,6 +15,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FrameworkTest.printHelloFramework()
+//        FrameworkTest.printHelloFramework()
     }
 }

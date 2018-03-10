@@ -15,7 +15,6 @@
 		FB9523A920543B2300380FAA /* CTAStatusFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9523A720543B2300380FAA /* CTAStatusFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB9523AC20543B2300380FAA /* CTAStatusFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523A520543B2200380FAA /* CTAStatusFramework.framework */; };
 		FB9523AD20543B2300380FAA /* CTAStatusFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523A520543B2200380FAA /* CTAStatusFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB9523B420543B4000380FAA /* FrameworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523B320543B4000380FAA /* FrameworkTest.swift */; };
 		FB9523BC20543CEE00380FAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523BB20543CEE00380FAA /* NotificationCenter.framework */; };
 		FB9523BF20543CEE00380FAA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523BE20543CEE00380FAA /* TodayViewController.swift */; };
 		FB9523C220543CEE00380FAA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9523C020543CEE00380FAA /* MainInterface.storyboard */; };
@@ -24,8 +23,16 @@
 		FB9523D72054445900380FAA /* NetworkingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9523D52054445900380FAA /* NetworkingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB9523DA2054445900380FAA /* NetworkingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; };
 		FB9523DB2054445900380FAA /* NetworkingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB9523E12054449800380FAA /* NetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E02054449800380FAA /* NetworkingTest.swift */; };
 		FB9523E2205444C200380FAA /* NetworkingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; };
+		FB9523E52054465800380FAA /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E42054465800380FAA /* NetworkTask.swift */; };
+		FB9523E72054468D00380FAA /* TaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E62054468D00380FAA /* TaskCoordinator.swift */; };
+		FB9523E9205446BD00380FAA /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E8205446BD00380FAA /* DataParser.swift */; };
+		FB9523EB205446C800380FAA /* ResponseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EA205446C800380FAA /* ResponseLogger.swift */; };
+		FB9523ED20544F9D00380FAA /* TaskSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EC20544F9D00380FAA /* TaskSender.swift */; };
+		FB9523EF20544FB300380FAA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EE20544FB300380FAA /* Result.swift */; };
+		FB9523F12054577C00380FAA /* StatusFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F02054577C00380FAA /* StatusFetcher.swift */; };
+		FB9523F32054595900380FAA /* RouteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F22054595900380FAA /* RouteStatus.swift */; };
+		FB9523F520545C3E00380FAA /* RouteListFilterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523F420545C3E00380FAA /* RouteListFilterer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +96,6 @@
 		FB9523A520543B2200380FAA /* CTAStatusFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CTAStatusFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9523A720543B2300380FAA /* CTAStatusFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAStatusFramework.h; sourceTree = "<group>"; };
 		FB9523A820543B2300380FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB9523B320543B4000380FAA /* FrameworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTest.swift; sourceTree = "<group>"; };
 		FB9523B920543CEE00380FAA /* CTAStatusTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CTAStatusTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9523BB20543CEE00380FAA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		FB9523BE20543CEE00380FAA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +104,15 @@
 		FB9523D32054445900380FAA /* NetworkingFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkingFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9523D52054445900380FAA /* NetworkingFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingFramework.h; sourceTree = "<group>"; };
 		FB9523D62054445900380FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB9523E02054449800380FAA /* NetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTest.swift; sourceTree = "<group>"; };
+		FB9523E42054465800380FAA /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		FB9523E62054468D00380FAA /* TaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCoordinator.swift; sourceTree = "<group>"; };
+		FB9523E8205446BD00380FAA /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		FB9523EA205446C800380FAA /* ResponseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogger.swift; sourceTree = "<group>"; };
+		FB9523EC20544F9D00380FAA /* TaskSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSender.swift; sourceTree = "<group>"; };
+		FB9523EE20544FB300380FAA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FB9523F02054577C00380FAA /* StatusFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFetcher.swift; sourceTree = "<group>"; };
+		FB9523F22054595900380FAA /* RouteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStatus.swift; sourceTree = "<group>"; };
+		FB9523F420545C3E00380FAA /* RouteListFilterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListFilterer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +207,9 @@
 		FB9523A620543B2300380FAA /* CTAStatusFramework */ = {
 			isa = PBXGroup;
 			children = (
-				FB9523B320543B4000380FAA /* FrameworkTest.swift */,
+				FB9523F420545C3E00380FAA /* RouteListFilterer.swift */,
+				FB9523F22054595900380FAA /* RouteStatus.swift */,
+				FB9523F02054577C00380FAA /* StatusFetcher.swift */,
 				FB9523B220543B2900380FAA /* Resources */,
 			);
 			path = CTAStatusFramework;
@@ -237,7 +253,12 @@
 		FB9523D42054445900380FAA /* NetworkingFramework */ = {
 			isa = PBXGroup;
 			children = (
-				FB9523E02054449800380FAA /* NetworkingTest.swift */,
+				FB9523E8205446BD00380FAA /* DataParser.swift */,
+				FB9523E42054465800380FAA /* NetworkTask.swift */,
+				FB9523EA205446C800380FAA /* ResponseLogger.swift */,
+				FB9523EE20544FB300380FAA /* Result.swift */,
+				FB9523E62054468D00380FAA /* TaskCoordinator.swift */,
+				FB9523EC20544F9D00380FAA /* TaskSender.swift */,
 				FB9523DF2054446800380FAA /* Resources */,
 			);
 			path = NetworkingFramework;
@@ -449,7 +470,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB9523B420543B4000380FAA /* FrameworkTest.swift in Sources */,
+				FB9523F12054577C00380FAA /* StatusFetcher.swift in Sources */,
+				FB9523F32054595900380FAA /* RouteStatus.swift in Sources */,
+				FB9523F520545C3E00380FAA /* RouteListFilterer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +488,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB9523E12054449800380FAA /* NetworkingTest.swift in Sources */,
+				FB9523EF20544FB300380FAA /* Result.swift in Sources */,
+				FB9523ED20544F9D00380FAA /* TaskSender.swift in Sources */,
+				FB9523E52054465800380FAA /* NetworkTask.swift in Sources */,
+				FB9523E72054468D00380FAA /* TaskCoordinator.swift in Sources */,
+				FB9523EB205446C800380FAA /* ResponseLogger.swift in Sources */,
+				FB9523E9205446BD00380FAA /* DataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +770,7 @@
 		FB9523DD2054445900380FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -768,6 +797,7 @@
 		FB9523DE2054445900380FAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
