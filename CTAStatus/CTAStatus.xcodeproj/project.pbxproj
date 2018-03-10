@@ -21,6 +21,11 @@
 		FB9523C220543CEE00380FAA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9523C020543CEE00380FAA /* MainInterface.storyboard */; };
 		FB9523C620543CEF00380FAA /* CTAStatusTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FB9523B920543CEE00380FAA /* CTAStatusTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FB9523CD20543D7D00380FAA /* CTAStatusFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523A520543B2200380FAA /* CTAStatusFramework.framework */; };
+		FB9523D72054445900380FAA /* NetworkingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9523D52054445900380FAA /* NetworkingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB9523DA2054445900380FAA /* NetworkingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; };
+		FB9523DB2054445900380FAA /* NetworkingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB9523E12054449800380FAA /* NetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E02054449800380FAA /* NetworkingTest.swift */; };
+		FB9523E2205444C200380FAA /* NetworkingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,13 @@
 			remoteGlobalIDString = FB9523B820543CEE00380FAA;
 			remoteInfo = CTAStatusTodayExtension;
 		};
+		FB9523D82054445900380FAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB95238120543A3200380FAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB9523D22054445900380FAA;
+			remoteInfo = NetworkingFramework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +60,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FB9523AD20543B2300380FAA /* CTAStatusFramework.framework in Embed Frameworks */,
+				FB9523DB2054445900380FAA /* NetworkingFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +95,10 @@
 		FB9523BE20543CEE00380FAA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		FB9523C120543CEE00380FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FB9523C320543CEF00380FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9523D32054445900380FAA /* NetworkingFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkingFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9523D52054445900380FAA /* NetworkingFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingFramework.h; sourceTree = "<group>"; };
+		FB9523D62054445900380FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9523E02054449800380FAA /* NetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9523AC20543B2300380FAA /* CTAStatusFramework.framework in Frameworks */,
+				FB9523DA2054445900380FAA /* NetworkingFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB9523E2205444C200380FAA /* NetworkingFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +128,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB9523CF2054445900380FAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +144,7 @@
 				FB95238B20543A3200380FAA /* CTAStatus */,
 				FB9523A620543B2300380FAA /* CTAStatusFramework */,
 				FB9523BD20543CEE00380FAA /* CTAStatusTodayExtension */,
+				FB9523D42054445900380FAA /* NetworkingFramework */,
 				FB9523BA20543CEE00380FAA /* Frameworks */,
 				FB95238A20543A3200380FAA /* Products */,
 			);
@@ -129,6 +156,7 @@
 				FB95238920543A3200380FAA /* CTAStatus.app */,
 				FB9523A520543B2200380FAA /* CTAStatusFramework.framework */,
 				FB9523B920543CEE00380FAA /* CTAStatusTodayExtension.appex */,
+				FB9523D32054445900380FAA /* NetworkingFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +234,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FB9523D42054445900380FAA /* NetworkingFramework */ = {
+			isa = PBXGroup;
+			children = (
+				FB9523E02054449800380FAA /* NetworkingTest.swift */,
+				FB9523DF2054446800380FAA /* Resources */,
+			);
+			path = NetworkingFramework;
+			sourceTree = "<group>";
+		};
+		FB9523DF2054446800380FAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB9523D62054445900380FAA /* Info.plist */,
+				FB9523D52054445900380FAA /* NetworkingFramework.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -214,6 +260,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9523A920543B2300380FAA /* CTAStatusFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9523D02054445900380FAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9523D72054445900380FAA /* NetworkingFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +289,7 @@
 			dependencies = (
 				FB9523AB20543B2300380FAA /* PBXTargetDependency */,
 				FB9523C520543CEF00380FAA /* PBXTargetDependency */,
+				FB9523D92054445900380FAA /* PBXTargetDependency */,
 			);
 			name = CTAStatus;
 			productName = CTAStatus;
@@ -276,6 +331,24 @@
 			productReference = FB9523B920543CEE00380FAA /* CTAStatusTodayExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		FB9523D22054445900380FAA /* NetworkingFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9523DC2054445900380FAA /* Build configuration list for PBXNativeTarget "NetworkingFramework" */;
+			buildPhases = (
+				FB9523CE2054445900380FAA /* Sources */,
+				FB9523CF2054445900380FAA /* Frameworks */,
+				FB9523D02054445900380FAA /* Headers */,
+				FB9523D12054445900380FAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkingFramework;
+			productName = NetworkingFramework;
+			productReference = FB9523D32054445900380FAA /* NetworkingFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,6 +372,11 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					FB9523D22054445900380FAA = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = FB95238420543A3200380FAA /* Build configuration list for PBXProject "CTAStatus" */;
@@ -317,6 +395,7 @@
 				FB95238820543A3200380FAA /* CTAStatus */,
 				FB9523A420543B2200380FAA /* CTAStatusFramework */,
 				FB9523B820543CEE00380FAA /* CTAStatusTodayExtension */,
+				FB9523D22054445900380FAA /* NetworkingFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -344,6 +423,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9523C220543CEE00380FAA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9523D12054445900380FAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +461,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB9523CE2054445900380FAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9523E12054449800380FAA /* NetworkingTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -387,6 +481,11 @@
 			isa = PBXTargetDependency;
 			target = FB9523B820543CEE00380FAA /* CTAStatusTodayExtension */;
 			targetProxy = FB9523C420543CEF00380FAA /* PBXContainerItemProxy */;
+		};
+		FB9523D92054445900380FAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB9523D22054445900380FAA /* NetworkingFramework */;
+			targetProxy = FB9523D82054445900380FAA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -640,6 +739,57 @@
 			};
 			name = Release;
 		};
+		FB9523DD2054445900380FAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HTVQW2NNE8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkingFramework/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robtimpone.NetworkingFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB9523DE2054445900380FAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HTVQW2NNE8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkingFramework/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robtimpone.NetworkingFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -675,6 +825,15 @@
 			buildConfigurations = (
 				FB9523C820543CEF00380FAA /* Debug */,
 				FB9523C920543CEF00380FAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9523DC2054445900380FAA /* Build configuration list for PBXNativeTarget "NetworkingFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9523DD2054445900380FAA /* Debug */,
+				FB9523DE2054445900380FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import NetworkingFramework
 
 public class FrameworkTest {
     
     public class func printHelloFramework() {
         print("Hello, framework!")
+        NetworkingTest.printHelloNetworking()
     }
 }
