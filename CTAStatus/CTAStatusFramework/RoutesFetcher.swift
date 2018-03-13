@@ -9,7 +9,7 @@
 import Foundation
 import NetworkingFramework
 
-public struct StatusFetcher {
+public struct RoutesFetcher {
     
     public static func fetchTrainRoutes(completion: @escaping (Result<[Route]>) -> Void) {
         
