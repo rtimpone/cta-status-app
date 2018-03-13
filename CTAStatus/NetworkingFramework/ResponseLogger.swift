@@ -9,7 +9,6 @@
 import Foundation
 
 protocol ResponseLogger {
-    
     func logResponse(_ response: URLResponse)
 }
 

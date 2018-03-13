@@ -1,5 +1,5 @@
 //
-//  DataParser.swift
+//  Parser.swift
 //  NetworkingFramework
 //
 //  Created by Rob Timpone on 3/10/18.
