@@ -36,6 +36,7 @@
 		FBFBF43220547E110002AB25 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF43120547E110002AB25 /* TodayTableViewCell.swift */; };
 		FBFBF43420547F380002AB25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF43320547F380002AB25 /* Extensions.swift */; };
 		FBFBF436205482080002AB25 /* TodayTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF435205482080002AB25 /* TodayTableViewDataSource.swift */; };
+		FBFBF438205761180002AB25 /* RoutesSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBF437205761180002AB25 /* RoutesSorter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		FBFBF43120547E110002AB25 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		FBFBF43320547F380002AB25 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FBFBF435205482080002AB25 /* TodayTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewDataSource.swift; sourceTree = "<group>"; };
+		FBFBF437205761180002AB25 /* RoutesSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesSorter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 				FB9523F420545C3E00380FAA /* RouteListFilterer.swift */,
 				FB9523F22054595900380FAA /* RouteStatus.swift */,
 				FB9523F02054577C00380FAA /* RoutesFetcher.swift */,
+				FBFBF437205761180002AB25 /* RoutesSorter.swift */,
 				FB9523B220543B2900380FAA /* Resources */,
 			);
 			path = CTAStatusFramework;
@@ -481,6 +484,7 @@
 			files = (
 				FB9523F12054577C00380FAA /* RoutesFetcher.swift in Sources */,
 				FB9523F32054595900380FAA /* RouteStatus.swift in Sources */,
+				FBFBF438205761180002AB25 /* RoutesSorter.swift in Sources */,
 				FB9523F520545C3E00380FAA /* RouteListFilterer.swift in Sources */,
 				FBFBF43420547F380002AB25 /* Extensions.swift in Sources */,
 			);

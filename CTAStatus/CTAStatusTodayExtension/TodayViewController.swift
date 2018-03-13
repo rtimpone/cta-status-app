@@ -29,7 +29,8 @@ extension TodayViewController: NCWidgetProviding {
             
             switch result {
             case .success(let routes):
-                self.tableDataSource.reloadTable(withRoutes: routes)
+                let sortedRoutes = RoutesSorter.sortRoutes(routes)
+                self.tableDataSource.reloadTable(withRoutes: sortedRoutes)
             case .failure:
                 print("Today extension failed to fetch train routes")
             }
