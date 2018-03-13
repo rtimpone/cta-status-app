@@ -16,9 +16,9 @@ protocol TaskCoordinator {
 
 extension TaskCoordinator {
     
-    public func sendTaskAndParseResponse<T: Decodable>(_ task: NetworkTask<T>, completion: @escaping (Result<[TypeToParseInto]>) -> Void) {
+    public func sendTaskAndParseResponse<T>(_ task: NetworkTask<T>, completion: @escaping (Result<[TypeToParseInto]>) -> Void) {
         
-        let sender = ConsoleLoggingTaskSender<T>()
+        let sender = URLSessionTaskSender<T>()
         sender.sendTask(task) { result in
             
             switch result {

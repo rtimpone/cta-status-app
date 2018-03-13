@@ -11,19 +11,17 @@ import Foundation
 protocol TaskSender {
     
     associatedtype TaskType
-    var logger: ResponseLogger { get }
+    func sendTask(_ task: NetworkTask<TaskType>, completion: @escaping (Result<Data>) -> Void)
 }
 
-extension TaskSender {
+struct URLSessionTaskSender<T>: TaskSender {
+    
+    typealias TaskType = T
     
     func sendTask(_ task: NetworkTask<TaskType>, completion: @escaping (Result<Data>) -> Void) {
         
         let url = task.url
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            if let response = response {
-                self.logger.logResponse(response)
-            }
             
             guard let data = data else {
                 completion(.failure)
@@ -35,10 +33,4 @@ extension TaskSender {
         
         task.resume()
     }
-}
-
-struct ConsoleLoggingTaskSender<T>: TaskSender {
-    
-    typealias TaskType = T
-    var logger: ResponseLogger = ConsoleResponseLogger()
 }
