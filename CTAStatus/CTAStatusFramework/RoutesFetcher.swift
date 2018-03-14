@@ -13,11 +13,15 @@ public struct RoutesFetcher {
     
     public static func fetchTrainRoutes(completion: @escaping (Result<[Route]>) -> Void) {
         
+        let taskSender = URLSessionTaskSender()
+        let parser = JSONParser()
+        let logger = ConsoleResponseLogger()
+        let networkStack = NetworkStack(taskSender: taskSender, logger: logger, parser: parser)
+        
         let url = URL(string: "http://www.transitchicago.com/api/1.0/routes.aspx?outputType=JSON")!
         let task = NetworkTask<RouteInfo>(url: url)
-        let coordinator = JSONTaskCoordinator<RouteInfo>()
         
-        coordinator.sendTaskAndParseResponse(task) { result in
+        networkStack.processTask(task) { result in
             
             switch result {
             case .success(let routeInfos):

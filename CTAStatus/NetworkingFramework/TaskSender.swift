@@ -8,27 +8,28 @@
 
 import Foundation
 
-protocol TaskSender {
+public protocol TaskSender {
     
-    associatedtype TaskType
-    func sendTask(_ task: NetworkTask<TaskType>, completion: @escaping (Result<Data>) -> Void)
+    func sendTask<T>(_ task: NetworkTask<T>, completion: @escaping (URLResponse?, Result<Data>) -> Void)
 }
 
-struct URLSessionTaskSender<T>: TaskSender {
+public struct URLSessionTaskSender: TaskSender {
     
-    typealias TaskType = T
+    public init() {}
     
-    func sendTask(_ task: NetworkTask<TaskType>, completion: @escaping (Result<Data>) -> Void) {
+    public func sendTask<T>(_ task: NetworkTask<T>, completion: @escaping (URLResponse?, Result<Data>) -> Void) {
         
         let url = task.url
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
+            //catch error codes here
+            
             guard let data = data else {
-                completion(.failure)
+                completion(response, .failure)
                 return
             }
             
-            completion(.success(data))
+            completion(response, .success(data))
         }
         
         task.resume()

@@ -8,23 +8,25 @@
 
 import Foundation
 
-class Parser<T> {
+public class Parser {
     
-    func parse(data: Data) -> T? {
+    func parse<T>(type: T.Type, from data: Data) -> T? where T: Decodable {
         fatalError("To be implemented by a concrete subclass")
     }
 }
 
-class JSONParser<T: Decodable>: Parser<T> {
+public class JSONParser: Parser {
     
-    override func parse(data: Data) -> T? {
+    public override init() {}
+    
+    override func parse<T>(type: T.Type, from data: Data) -> T? where T: Decodable {
         
         do {
             let decoder = JSONDecoder()
-            return try decoder.decode(T.self, from: data)
+            return try decoder.decode(type, from: data)
         }
         catch {
-            print("Parser was unable to parse json data into type '\(String(describing: T.self))'")
+            print("Parser was unable to parse json data into type '\(String(describing: type))'")
             return nil
         }
     }
