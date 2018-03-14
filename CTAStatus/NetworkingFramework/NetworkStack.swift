@@ -20,7 +20,7 @@ public struct NetworkStack {
         self.parser = parser
     }
     
-    public func processTask<T: Decodable>(_ task: NetworkTask<T>, completion: @escaping (Result<[T]>) -> Void) {
+    public func processTask<T>(_ task: NetworkTask<T>, completion: @escaping (Result<[T]>) -> Void) where T: Parsable {
         
         taskSender.sendTask(task) { response, result in
             
