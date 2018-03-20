@@ -12,12 +12,8 @@ import NetworkingFramework
 public struct RoutesFetcher {
     
     public static func fetchTrainRoutes(completion: @escaping (Result<[Route]>) -> Void) {
-        
-        let taskSender = URLSessionTaskSender()
-        let parser = JSONParser()
-        let logger = ConsoleResponseLogger()
-        let networkStack = NetworkStack(taskSender: taskSender, logger: logger, parser: parser)
-        
+
+        let networkStack = NetworkStackFactory.defaultNetworkStack()
         let url = URL(string: "http://www.transitchicago.com/api/1.0/routes.aspx?outputType=JSON")!
         let task = NetworkTask<RouteInfo>(url: url)
         
@@ -31,7 +27,7 @@ public struct RoutesFetcher {
                     return
                 }
                 
-                let trainRoutes = RouteListFilerer.filterNonTrainRoutes(fromList: routesList)
+                let trainRoutes = RouteListFilterer.filterNonTrainRoutes(fromList: routesList)
                 completion(.success(trainRoutes))
                 
             case .failure:

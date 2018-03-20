@@ -10,16 +10,14 @@ import Foundation
 
 public typealias Parsable = Decodable
 
-public class Parser {
+class Parser {
     
     func parse<T>(type: T.Type, from data: Data) -> T? where T: Parsable {
         fatalError("To be implemented by a concrete subclass")
     }
 }
 
-public class JSONParser: Parser {
-    
-    public override init() {}
+class JSONParser: Parser {
     
     override func parse<T>(type: T.Type, from data: Data) -> T? where T: Parsable {
         

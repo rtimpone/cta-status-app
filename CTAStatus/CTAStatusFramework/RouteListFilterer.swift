@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RouteListFilerer {
+struct RouteListFilterer {
     
     static func filterNonTrainRoutes(fromList list: RoutesList) -> [Route] {
         return list.routes.filter { $0.isTrainRoute }

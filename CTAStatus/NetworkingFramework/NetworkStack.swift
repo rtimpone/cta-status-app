@@ -14,7 +14,7 @@ public struct NetworkStack {
     var logger: ResponseLogger
     var parser: Parser
     
-    public init(taskSender: TaskSender, logger: ResponseLogger, parser: Parser) {
+    init(taskSender: TaskSender, logger: ResponseLogger, parser: Parser) {
         self.taskSender = taskSender
         self.logger = logger
         self.parser = parser

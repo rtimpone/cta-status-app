@@ -8,16 +8,13 @@
 
 import Foundation
 
-public protocol TaskSender {
-    
+protocol TaskSender {
     func sendTask<T>(_ task: NetworkTask<T>, completion: @escaping (URLResponse?, Result<Data>) -> Void)
 }
 
-public struct URLSessionTaskSender: TaskSender {
+struct URLSessionTaskSender: TaskSender {
     
-    public init() {}
-    
-    public func sendTask<T>(_ task: NetworkTask<T>, completion: @escaping (URLResponse?, Result<Data>) -> Void) {
+    func sendTask<T>(_ task: NetworkTask<T>, completion: @escaping (URLResponse?, Result<Data>) -> Void) {
         
         let url = task.url
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

@@ -8,15 +8,13 @@
 
 import Foundation
 
-public protocol ResponseLogger {
+protocol ResponseLogger {
     func logResponse(_ response: URLResponse)
 }
 
-public struct ConsoleResponseLogger: ResponseLogger {
+struct ConsoleResponseLogger: ResponseLogger {
     
-    public init() {}
-    
-    public func logResponse(_ response: URLResponse) {
+    func logResponse(_ response: URLResponse) {
         
         var statusCode = "UNKNOWN STATUS CODE"
         if let httpResponse = response as? HTTPURLResponse {
