@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB94ED2B2060993600A14100 /* NetworkStackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94ED2A2060993600A14100 /* NetworkStackFactory.swift */; };
 		FB95238D20543A3200380FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95238C20543A3200380FAA /* AppDelegate.swift */; };
 		FB95238F20543A3200380FAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95238E20543A3200380FAA /* ViewController.swift */; };
 		FB95239220543A3200380FAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB95239020543A3200380FAA /* Main.storyboard */; };
@@ -25,8 +26,8 @@
 		FB9523DB2054445900380FAA /* NetworkingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FB9523E2205444C200380FAA /* NetworkingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9523D32054445900380FAA /* NetworkingFramework.framework */; };
 		FB9523E52054465800380FAA /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E42054465800380FAA /* NetworkTask.swift */; };
-		FB9523E72054468D00380FAA /* TaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E62054468D00380FAA /* TaskCoordinator.swift */; };
-		FB9523E9205446BD00380FAA /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E8205446BD00380FAA /* DataParser.swift */; };
+		FB9523E72054468D00380FAA /* NetworkStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E62054468D00380FAA /* NetworkStack.swift */; };
+		FB9523E9205446BD00380FAA /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523E8205446BD00380FAA /* Parser.swift */; };
 		FB9523EB205446C800380FAA /* ResponseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EA205446C800380FAA /* ResponseLogger.swift */; };
 		FB9523ED20544F9D00380FAA /* TaskSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EC20544F9D00380FAA /* TaskSender.swift */; };
 		FB9523EF20544FB300380FAA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9523EE20544FB300380FAA /* Result.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB94ED2A2060993600A14100 /* NetworkStackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStackFactory.swift; sourceTree = "<group>"; };
 		FB95238920543A3200380FAA /* CTAStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTAStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB95238C20543A3200380FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB95238E20543A3200380FAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +111,8 @@
 		FB9523D52054445900380FAA /* NetworkingFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingFramework.h; sourceTree = "<group>"; };
 		FB9523D62054445900380FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB9523E42054465800380FAA /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
-		FB9523E62054468D00380FAA /* TaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCoordinator.swift; sourceTree = "<group>"; };
-		FB9523E8205446BD00380FAA /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		FB9523E62054468D00380FAA /* NetworkStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStack.swift; sourceTree = "<group>"; };
+		FB9523E8205446BD00380FAA /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		FB9523EA205446C800380FAA /* ResponseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogger.swift; sourceTree = "<group>"; };
 		FB9523EC20544F9D00380FAA /* TaskSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSender.swift; sourceTree = "<group>"; };
 		FB9523EE20544FB300380FAA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -265,11 +267,12 @@
 		FB9523D42054445900380FAA /* NetworkingFramework */ = {
 			isa = PBXGroup;
 			children = (
-				FB9523E8205446BD00380FAA /* DataParser.swift */,
+				FB9523E62054468D00380FAA /* NetworkStack.swift */,
+				FB94ED2A2060993600A14100 /* NetworkStackFactory.swift */,
 				FB9523E42054465800380FAA /* NetworkTask.swift */,
+				FB9523E8205446BD00380FAA /* Parser.swift */,
 				FB9523EA205446C800380FAA /* ResponseLogger.swift */,
 				FB9523EE20544FB300380FAA /* Result.swift */,
-				FB9523E62054468D00380FAA /* TaskCoordinator.swift */,
 				FB9523EC20544F9D00380FAA /* TaskSender.swift */,
 				FB9523DF2054446800380FAA /* Resources */,
 			);
@@ -507,9 +510,10 @@
 				FB9523EF20544FB300380FAA /* Result.swift in Sources */,
 				FB9523ED20544F9D00380FAA /* TaskSender.swift in Sources */,
 				FB9523E52054465800380FAA /* NetworkTask.swift in Sources */,
-				FB9523E72054468D00380FAA /* TaskCoordinator.swift in Sources */,
+				FB9523E72054468D00380FAA /* NetworkStack.swift in Sources */,
+				FB94ED2B2060993600A14100 /* NetworkStackFactory.swift in Sources */,
 				FB9523EB205446C800380FAA /* ResponseLogger.swift in Sources */,
-				FB9523E9205446BD00380FAA /* DataParser.swift in Sources */,
+				FB9523E9205446BD00380FAA /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
